@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import Context from './Context';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   
