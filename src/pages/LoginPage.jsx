@@ -28,6 +28,8 @@ export default function LoginPage(){
         promise.then((resposta) => { 
             setDesabilitar(true);
             setToken(resposta.data.token);
+            localStorage.setItem("token", resposta.data.token)
+            navigate("/tela-inicial")
             console.log(resposta);
         });
         promise.catch( erro => {
