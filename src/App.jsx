@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AddProducts from './pages/AddProducts';
 import ToManage from './pages/ToManage';
+import InfoProduct from './pages/InfoProduct';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/home-page" element={<HomePage/>}/>
           <Route path="/to-manage" element={<ToManage/>}/>
           <Route path="/add-products" element={<AddProducts/>}/>
+          <Route path="/info-product/:idProduct" element={<InfoProduct/>}/>
         </Routes>
       </BrowserRouter>
     </Context.Provider>

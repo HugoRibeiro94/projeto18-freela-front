@@ -43,6 +43,7 @@ export default function HomePage(){
                 {products.map( (item) => 
                     <Products
                         key={item.id}
+                        id={item.id}
                         description={item.description}
                         name={item.name}
                         image={item.image}

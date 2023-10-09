@@ -1,16 +1,20 @@
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components"
 
 export default function Products(props){
-    const {key, name, description, image, price} = props
+    const {key, name, description, image, price, id} = props
+
     return(
         <>
             <ListProductContainer>
+              <Link to = {`/info-product/${id}`}>
                 <div>
                     <img src={image} />
                     <h1><strong>{name}</strong></h1>
                     <p>Descrição: {description}</p>
                     <p>Preço: {price}</p>
                 </div>
+              </Link>
           </ListProductContainer>
         </>
     )
