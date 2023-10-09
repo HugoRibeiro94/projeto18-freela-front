@@ -11,8 +11,12 @@ import ToManage from './pages/ToManage';
 function App() {
   
   const [token, setToken] = useState(localStorage.getItem("token"));
+  const [products, setProducts] = useState([])
+  const [activeProduct, setActiveProduct] = useState([])
+  const [disabledButton, setDisabledButton] = useState(false)
+
   return (
-    <Context.Provider value={{ token, setToken}}>
+    <Context.Provider value={{ token, setToken, products, setProducts,activeProduct, setActiveProduct,disabledButton, setDisabledButton}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage/>}/>

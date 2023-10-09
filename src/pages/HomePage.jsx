@@ -5,11 +5,13 @@ import styled from "styled-components"
 import Products from "../components/Products";
 import Header from "../components/Header";
 import Context from "../Context";
+import { Itens, Titulo } from "../style/StyleInicio";
 
 export default function HomePage(){
 
-    const [products, setProducts] = useState([])
+    const {products, setProducts} = useContext(Context)
     const {token, setToken} = useContext(Context);
+    const {activeProduct, setActiveProduct} = useContext(Context);
 
     const navigate = useNavigate();
 
@@ -35,7 +37,7 @@ export default function HomePage(){
         <>
             <Header/>
 
-            Itens Disponíveis
+            <Titulo>Itens Disponíveis</Titulo>
 
             <Itens>
                 {products.map( (item) => 
@@ -45,6 +47,7 @@ export default function HomePage(){
                         name={item.name}
                         image={item.image}
                         price={item.price}
+                       
                     />
                 )}
             </Itens>
@@ -52,9 +55,3 @@ export default function HomePage(){
     )
 }
 
-const Itens = styled.ul`
-    width: 100%;
-    height: 100%;
-    margin-top: 70px;
-    background-color: blueviolet;
-`

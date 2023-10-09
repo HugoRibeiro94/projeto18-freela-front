@@ -1,15 +1,15 @@
 import styled from "styled-components"
 
 export default function Products(props){
-    const {name, description, image, price} = props
+    const {key, name, description, image, price} = props
     return(
         <>
             <ListProductContainer>
                 <div>
                     <img src={image} />
-                    <strong>{name}</strong>
-                    <p>{description}</p>
-                    <p>{price}</p>
+                    <h1><strong>{name}</strong></h1>
+                    <p>Descrição: {description}</p>
+                    <p>Preço: {price}</p>
                 </div>
           </ListProductContainer>
         </>
@@ -18,13 +18,17 @@ export default function Products(props){
 
 const ListProductContainer = styled.li`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
   color: #000000;
   margin-right: 10px;
-  div span {
-    color: #c6c6c6;
-    margin-right: 10px;
+  p{
+    font-size: 20x;
   }
+  img{
+    width: 200px;
+    height:200px;
+    }
 `

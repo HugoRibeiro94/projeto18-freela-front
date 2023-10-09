@@ -44,7 +44,7 @@ export default function RegisterPage(){
             navigate('/')
         });
         promise.catch( erro => { 
-            alert(erro.response.data.message),
+            alert(erro.response.data),
             setDesabilitar(false)});
     }
    

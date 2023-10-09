@@ -29,11 +29,11 @@ export default function LoginPage(){
             setDesabilitar(true);
             setToken(resposta.data.token);
             localStorage.setItem("token", resposta.data.token)
-            navigate("/tela-inicial")
+            navigate("/home-page")
             console.log(resposta);
         });
         promise.catch( erro => {
-            alert(erro.response.data.message), 
+            alert(erro.response.data), 
             setDesabilitar(false)
         }); 
         

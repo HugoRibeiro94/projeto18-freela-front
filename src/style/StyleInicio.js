@@ -1,5 +1,6 @@
 import { styled } from "styled-components"
 const Container = styled.div`
+    margin-top: 100px;
     height:500px;
     display: flex;
     flex-direction: column;
@@ -39,6 +40,25 @@ const ButtonRetorno = styled.button`
     color: black;
     border:none;
     background-color: rgba(255, 255, 255, 1);
-    text-decoration: underline;
+    
 `
-export {Button, ButtonRetorno,Container,Input}
+const Titulo = styled.div`
+        margin-top: 100px ;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        font-size: 40px;
+    `
+
+const Itens = styled.ul`
+width: 100%;
+height: 100%;
+margin-top: 100px;
+background-color: #FFFF;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+
+`
+export {Button, ButtonRetorno,Container,Input,Titulo, Itens}
